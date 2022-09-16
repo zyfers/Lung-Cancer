@@ -1,0 +1,43 @@
+<div style="display: flex; align-items: center; justify-content: center">
+  <div class="center">
+    <h1 style="font-family: 'Baskerville Old Face'">Predict Lung Cancer</h1>
+    <mat-form-field class="example-form-field" appearance="fill">
+      <mat-label>XPC lys939gly</mat-label>
+      <input matInput type="text" [(ngModel)]="param1" placeholder="[1-3]">
+      <button *ngIf="param1" matSuffix mat-icon-button aria-label="Clear" (click)="param1=''">
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-form-field>
+    <mat-form-field class="example-form-field" appearance="fill">
+      <mat-label>XPC ala499val</mat-label>
+      <input matInput type="text" [(ngModel)]="param2" placeholder="[1-3]">
+      <button *ngIf="param2" matSuffix mat-icon-button aria-label="Clear" (click)="param2=''">
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-form-field>
+    <mat-form-field class="example-form-field" appearance="fill">
+      <mat-label>XPD Arg156Arg</mat-label>
+      <input matInput type="text" [(ngModel)]="param3" placeholder="[1-3]">
+      <button *ngIf="param3" matSuffix mat-icon-button aria-label="Clear" (click)="param3=''">
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-form-field>
+    <mat-form-field class="example-form-field" appearance="fill">
+      <mat-label>XPF 11985</mat-label>
+      <input matInput type="text" [(ngModel)]="param4" placeholder="[1-3]">
+      <button *ngIf="param4" matSuffix mat-icon-button aria-label="Clear" (click)="param4=''">
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-form-field>
+    <mat-form-field class="example-form-field" appearance="fill">
+      <mat-label>XPF Arg415Gln</mat-label>
+      <input matInput type="text" [(ngModel)]="param5" placeholder="[1-3]">
+      <button *ngIf="param5" matSuffix mat-icon-button aria-label="Clear" (click)="param5=''">
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-form-field>
+    <button mat-raised-button color="warn" (click)="getResult(param1,param2,param3,param4,param4)">Get Result</button>
+    <h2 style="color: red; margin-top: 10px" [hidden]="dying">You are dying</h2>
+    <h2 style="color: forestgreen; margin-top: 10px" [hidden]="safe">You are safe</h2>
+  </div>
+</div>
